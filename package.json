@@ -1,10 +1,9 @@
 {
   "name": "webpack2-es7-boilerplate",
-  "version": "0.0.1-alpha",
+  "version": "0.0.2-alpha",
   "main": "index.js",
   "private": false,
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "babel-cli": "^6.11.4",
     "babel-core": "^6.13.2",
     "babel-loader": "^6.2.4",

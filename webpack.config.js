@@ -24,7 +24,8 @@ module.exports = {
 
   // Where to resolve our loaders
   resolveLoader: {
-    root: path.join(__dirname, 'node_modules')
+    modules: [path.join(__dirname, 'node_modules')],
+    moduleExtensions: ["-loader"],
   },
   resolve: {
     // Directories that contain our modules
@@ -32,7 +33,7 @@ module.exports = {
     descriptionFiles: ["package.json"],
     moduleExtensions: ["-loader"],
     // Extensions used to resolve modules
-    extensions: ['', '.js', '.scss', '.css']
+    extensions: ['.js', '.scss', '.css']
   },
 
   module: {
@@ -52,7 +53,6 @@ module.exports = {
                                              filename: "vendor.js"}),
     */
     new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compressor: {
         pure_getters: true,

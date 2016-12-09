@@ -52,7 +52,6 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({name: "vendor",
                                              filename: "vendor.js"}),
     */
-    new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compressor: {
         pure_getters: true,

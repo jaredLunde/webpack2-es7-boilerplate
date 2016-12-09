@@ -6,7 +6,7 @@
   "dependencies": {
   },
   "devDependencies": {
-    "webpack2-es7-boilerplate": "*"
+    "webpack2-es7-boilerplate": "^0.1.0"
   },
   "repository": {
     "type": "git",

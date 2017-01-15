@@ -1,12 +1,12 @@
 {
   "name": "{{PKG_NAME}}",
-  "version": "0.0.1-alpha",
+  "version": "0.1.0-alpha.0",
   "main": "index.js",
   "private": true,
   "dependencies": {
   },
   "devDependencies": {
-    "webpack2-es7-boilerplate": "^0.1.2"
+    "webpack2-es7-boilerplate": "^0.1.5"
   },
   "repository": {
     "type": "git",

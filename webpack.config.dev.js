@@ -3,7 +3,6 @@ var webpack = require('webpack')
 var Dashboard = require('webpack-dashboard')
 var DashboardPlugin = require('webpack-dashboard/plugin')
 
-
 var dashboard = new Dashboard()
 
 
@@ -35,20 +34,11 @@ module.exports = {
     descriptionFiles: ["package.json"],
     moduleExtensions: ["-loader"],
     // Extensions used to resolve modules
-    extensions: ['.js', '.scss', '.css']
+    extensions: ['.js']
   },
 
   module: {
     rules: [
-      /*
-      {
-        test: /\.scss$/,
-        loader: ExtractTextPlugin.extract({
-          fallbackLoader: 'style',
-          loader: 'css?group-css-media-queries!sass'
-        })
-      },
-      */
       {
         test: /\.js$/,
         loader: 'babel',

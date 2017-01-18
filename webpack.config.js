@@ -40,7 +40,7 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        loaders: ['babel', stripLogger],
+        use: ['babel', stripLogger],
         exclude: [/node_modules/]
       }
     ],

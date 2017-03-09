@@ -6,7 +6,7 @@
   "dependencies": {
   },
   "devDependencies": {
-    "webpack2-es7-boilerplate": "^0.1.7"
+    "webpack2-es7-boilerplate": "^0.1.8"
   },
   "repository": {
     "type": "git",
@@ -15,12 +15,12 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development node server.js",
     "build": "npm run build:es5 && npm run build:es6",
-    "build:es5": "cross-env NODE_ENV=cli babel ./lib --out-dir es5",
-    "build:es6": "cross-env NODE_ENV=production babel ./lib --out-dir ./",
+    "build:es5": "cross-env NODE_ENV=cli babel ./src --out-dir es5",
+    "build:es6": "cross-env NODE_ENV=production babel ./src --out-dir ./",
     "build:dist": "cross-env NODE_ENV=production webpack --config webpack.config.js",
-    "watch:es5": "cross-env NODE_ENV=cli babel ./lib -w --out-dir es5",
-    "watch:es6": "cross-env NODE_ENV=production babel ./lib -w --out-dir ./",
-    "start:cli": "npm run node ./lib/index.js",
+    "watch:es5": "cross-env NODE_ENV=cli babel ./src -w --out-dir es5",
+    "watch:es6": "cross-env NODE_ENV=production babel ./src -w --out-dir ./",
+    "start:cli": "npm run node ./src/index.js",
     "node": "cross-env NODE_ENV=cli babel-node",
     "prepublish": "npm run build"
   },

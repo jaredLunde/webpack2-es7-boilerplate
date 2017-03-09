@@ -19,20 +19,20 @@ module.exports = {
   output: {
     path: path.join(__dirname, '/dist'),
     publicPath: path.join(__dirname, '/assets/'),
-    filename: "{{PKG_NAME}}.dev.js",
+    filename: '{{PKG_NAME}}.dev.js',
     pathinfo: true
   },
 
   // Where to resolve our loaders
   resolveLoader: {
     modules: [path.join(__dirname, 'node_modules')],
-    moduleExtensions: ["-loader"],
+    moduleExtensions: ['-loader'],
   },
   resolve: {
     // Directories that contain our modules
-    modules: [path.resolve(__dirname, "lib"), "node_modules"],
-    descriptionFiles: ["package.json"],
-    moduleExtensions: ["-loader"],
+    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+    descriptionFiles: ['package.json'],
+    moduleExtensions: ['-loader'],
     // Extensions used to resolve modules
     extensions: ['.js']
   },
@@ -50,8 +50,8 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({'process.env': {NODE_ENV: '"development"'}}),
     /**
-    new webpack.optimize.CommonsChunkPlugin({name: "vendor",
-                                             filename: "vendor.dev.js"}),
+    new webpack.optimize.CommonsChunkPlugin({name: 'vendor',
+                                             filename: 'vendor.dev.js'}),
     */
     new DashboardPlugin(dashboard.setData),
   ],
